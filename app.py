@@ -23,6 +23,7 @@ def calculate_investments(odds_a, odds_b, total_investment):
 
 # Initialize the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 app.layout = html.Div(
     style={
@@ -186,4 +187,4 @@ def update_output(odds_a, odds_b, total_investment):
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
